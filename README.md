@@ -239,7 +239,6 @@
             font-weight: 500;
         }
 
-        /* Contact Section */
         .contact {
             padding: 100px 0;
             background: #333;
@@ -298,7 +297,6 @@
             transform: translateY(-2px);
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -310,7 +308,6 @@
             }
         }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -343,7 +340,6 @@
             margin-top: 1rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -361,7 +357,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav container">
             <div class="logo">Portfolio</div>
@@ -374,7 +369,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm a Developer</h1>
@@ -383,7 +377,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">My Skills</h2>
@@ -432,14 +425,12 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card" onclick="showProjectDetails('web-app')">
                     <div class="project-image">
-                        🌐 Web Application
                     </div>
                     <div class="project-content">
                         <h3>Interactive Web Application</h3>
@@ -454,7 +445,6 @@
 
                 <div class="project-card" onclick="showProjectDetails('python-tool')">
                     <div class="project-image">
-                        🐍 Python Tool
                     </div>
                     <div class="project-content">
                         <h3>Data Analysis Tool</h3>
@@ -469,7 +459,6 @@
 
                 <div class="project-card" onclick="showProjectDetails('cpp-system')">
                     <div class="project-image">
-                        ⚡ C++ System
                     </div>
                     <div class="project-content">
                         <h3>High-Performance System</h3>
@@ -484,7 +473,6 @@
 
                 <div class="project-card" onclick="showProjectDetails('algorithm')">
                     <div class="project-image">
-                        🧮 Algorithm Visualizer
                     </div>
                     <div class="project-content">
                         <h3>Algorithm Visualizer</h3>
@@ -541,7 +529,6 @@
             });
         }
 
-        // Show skill details
         function showSkillDetails(skill) {
             const modal = document.getElementById('modal');
             const title = document.getElementById('modal-title');
@@ -601,12 +588,10 @@
             modal.style.display = 'flex';
         }
 
-        // Close modal
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
         }
 
-        // Handle form submission
         function handleSubmit(event) {
             event.preventDefault();
             
@@ -623,11 +608,9 @@
             text.textContent = `Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`;
             modal.style.display = 'flex';
 
-            // Reset form
             event.target.reset();
         }
 
-        // Close modal when clicking outside
         window.onclick = function(event) {
             const modal = document.getElementById('modal');
             if (event.target === modal) {
@@ -635,7 +618,6 @@
             }
         }
 
-        // Add scroll effect to header
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
